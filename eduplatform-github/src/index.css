@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+:root {
+  --edu-bg: #f1f5f9;
+  --edu-nav: #ffffff;
+  --edu-card: #ffffff;
+  --edu-inset: #f8fafc;
+  --edu-border: #cbd5e1;
+  --edu-ink: #0f172a;
+  --edu-muted: #475569;
+  --edu-accent: #0284c7;
+  --edu-blue: #2563eb;
+  --edu-code-bg: #0b1120;
+  color-scheme: light;
+}
+
+.dark {
+  --edu-bg: #060a13;
+  --edu-nav: #0b1120;
+  --edu-card: #0f172a;
+  --edu-inset: #060a13;
+  --edu-border: #1e293b;
+  --edu-ink: #f8fafc;
+  --edu-muted: #94a3b8;
+  --edu-accent: #38bdf8;
+  --edu-blue: #2563eb;
+  --edu-code-bg: #0b1120;
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--edu-bg);
+    color: var(--edu-ink);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--edu-bg);
+    color: var(--edu-ink);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

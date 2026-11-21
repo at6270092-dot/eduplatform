@@ -1,0 +1,6 @@
+{
+  "name": "EduPlatform",
+  "description": "Fanlar, interaktiv darslar, bilim kartochkalari, testlar va Android Jetpack Compose kodi uchun yagona ta'lim platformasi.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
